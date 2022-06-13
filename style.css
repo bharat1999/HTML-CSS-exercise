@@ -1,0 +1,684 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap');
+
+
+:root {
+	--bg: #F0F0F0;
+	--card-bg: #FFFFFF;
+	--box-1-bg: #F17D7D;
+	--box-2-bg: #FFE600;
+	--box-3-bg: #46EEC6;
+	--line-color: #8E8C8C;
+}
+
+
+
+* {
+    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	background: var(--bg);
+	font-family: 'Rubik', sans-serif;
+}
+
+.container {
+	margin: 0 40px;
+	margin-top: 120px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.cards {
+	height: 180px;
+	width: 180px;
+	margin-right: 40px;
+	margin-bottom: 60px;
+	background-color: var(--card-bg);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+	border-radius: 8px;
+	position: relative;
+}
+
+
+.box {
+	margin: 0 8px 0 8px;
+	height: 40px;
+	border-radius: 8px;
+}
+
+.box-1 {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	background: var(--box-1-bg);
+	font-weight: 600;
+	font-style: normal;
+	font-size: 20px;
+	color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.box-2 {
+	background: var(--box-2-bg);
+	font-weight: 400;
+	font-style: normal;
+	font-size: 10px;
+}
+
+.box-3 {
+	margin-top: 10px;
+	margin-bottom: 20px;
+	background: var(--box-3-bg);
+	font-weight: 400;
+	font-style: normal;
+	font-size: 10px;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.cards:nth-child(even) .box-2 {
+	padding: 8px 12px;
+}
+
+.cards:nth-child(odd) .box-2 {
+	padding: 14px 12px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.card-10 {
+	flex-grow: 1;
+}
+
+.card-10 .box-2 {
+	display: flex;
+	align-items: center;
+}
+
+/* ball */
+
+.ball::after {
+	content: '';
+	background: linear-gradient(180deg, rgba(248, 178, 62, 0.984844) 0%, rgba(255, 230, 0, 0.97) 100%);
+	position: absolute;
+	top: 80px;
+	right: -60px;
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+}
+
+/*Right Line  */
+
+.box-1::before {
+	content: '';
+	border: 1px solid var(--line-color);
+	width: 40px;
+	position: absolute;
+	top: 89px;
+	right: -40px;
+	border-right: none;
+    border-bottom: none;
+    border-left: none;
+}
+
+/* Left line */
+
+.box-1::after {
+	content: '';
+	width: 20px;
+	height: 120px;
+	position: absolute;
+	top: -30px;
+	left: -20px;
+}
+
+/* Middle line */
+
+.box-3::before {
+	content: '';
+	position: absolute;
+	bottom: -30px;
+	right: -40px;
+	border: 1px solid var(--line-color);
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+}
+
+/* I Rightmost */
+@media only screen and (min-width: 2061px)  and (max-width:3000px){
+
+	/* Right Line  of I*/
+	.card-9 .box-1::before {
+		border: 1px solid var(--line-color);
+		height: 120px;
+		border-left: none;
+		border-bottom: none;
+	}
+
+	/* Left Line oh J*/
+	.card-10 .box-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+	/* Middle line */
+	.card-9 .box-3::before {
+		width: 2000px;
+	}
+
+
+}
+
+/* H Rightmost */
+@media only screen and (min-width: 1840px) and (max-width: 2060px) {
+
+	/* Right Line of H*/
+	.card-8 .box-1::before {
+		border: 1px solid var(--line-color);
+		height: 120px;
+		border-left: none;
+		border-bottom: none;
+	}
+
+	/* Middle line */
+	.card-8 .box-3::before {
+		width: 1780px;
+	}
+
+	/* Left Line of I*/
+	.card-9 .box-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+}
+
+/* G Rightmost */
+
+@media only screen and (min-width: 1620px) and (max-width: 1839px) {
+
+	/* Right Line of G*/
+	.card-7 .box-1::before {
+		border: 1px solid var(--line-color);
+		height: 120px;
+		border-left: none;
+		border-bottom: none;
+	}
+
+	/* Left Line of H */
+	.card-8 .box-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+	/* Middle Line */
+
+	.card-7 .box-3::before {
+		width: 1560px;
+	}
+
+}
+
+/* F RightMost */
+
+@media only screen and (min-width: 1400px) and (max-width: 1619px) {
+
+	/* Right Line of F */
+	.card-6 .box-1::before {
+		border: 1px solid var(--line-color);
+		height: 120px;
+		border-left: none;
+		border-bottom: none;
+	}
+
+	/* Middle Line */
+
+	.card-6 .box-3::before {
+		width: 1340px;
+	}
+
+	/* Left Line of G */
+	.card-7 .box-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+	
+}
+
+/* E Rightmost */
+
+@media only screen and (min-width: 1181px) and (max-width: 1399px) {
+
+	/* Right Line of E */
+	.card-5 .box-1::before {
+		border: 1px solid var(--line-color);
+		height: 120px;
+		border-left: none;
+		border-bottom: none;
+	}
+
+	/* Middle Line */
+	.card-5 .box-3::before {
+		width: 1120px;
+	}
+
+	/* Left Line of F */
+	.card-6 .box-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+	
+
+}
+
+/* D Rightmost */
+
+@media only screen and (min-width: 960px) and (max-width: 1180px) {
+
+	/* Right Line of D */
+	.card-4 .box-1::before {
+		border: 1px solid var(--line-color);
+		height: 120px;
+		border-left: none;
+		border-bottom: none;
+	}
+
+	/* Middle Line 1 */
+
+	.card-4 .box-3::before {
+		width: 900px;
+	}
+
+	/* Right of H */
+	.card-8 .box-1::before {
+		border: 1px solid var(--line-color);
+		height: 120px;
+		border-left: none;
+		border-bottom: none;
+	}
+
+	/* Left of E */
+	.card-5 .box-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+	/* Middle Line 2 */
+	.card-8 .box-3::before {
+		width: 900px;
+	}
+
+	/* Left of I */
+	.card-9 .box-1::after {
+		border: 1px solid var(--line-color);
+		border-top: none;
+		border-right: none;
+	}
+}
+
+/* C Rightmost */
+
+@media only screen and (min-width: 763px) and (max-width: 959px) {
+
+
+	/* Right Line of C */
+	.card-3 .box-1::before {
+		border: 1px solid var(--line-color);
+		height: 120px;
+		border-left: none;
+		border-bottom: none;
+	}
+
+	/* Middle Line 1 */
+	.card-3 .box-3::before {
+		border: 1px solid var(--line-color);
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		width: 680px;
+	}
+
+	/* Left Line of D */
+	.card-4 .box-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+	/* Right Line of F*/
+	.card-6 .box-1::before {
+		border: 1px solid var(--line-color);
+		height: 120px;
+		border-left: none;
+		border-bottom: none;
+	}
+
+	/* Middle Line 2 */
+	.card-6 .box-3::before {
+		width: 680px;
+	}
+
+	/* Left Line of G */
+	.card-7 .box-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+	/* Right Line of I */
+	.card-9 .box-1::before {
+		border: 1px solid var(--line-color);
+		height: 120px;
+		border-left: none;
+		border-bottom: none;
+	}
+
+	/* Middle Line 3 */
+	.card-9 .box-3::before {
+		width: 680px;
+	}
+
+	/* Left Line of J */
+	.card-10 .box-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+}
+
+/* B Rightmost */
+
+@media only screen and (min-width: 543px) and (max-width: 762px) {
+
+
+	
+	/* Right Line of B */
+	.card-2 .box-1::before {
+		border: 1px solid var(--line-color);
+		height: 120px;
+		border-left: none;
+		border-bottom: none;
+	}
+
+	/* Middle Line 1 */
+	.card-2 .box-3::before {
+		width: 460px;
+	}
+
+	/* Left Line of C  */
+	.card-3 .box-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+	/* Right Line of D */
+	.card-4 .box-1::before {
+		border: 1px solid var(--line-color);
+		height: 120px;
+		border-left: none;
+		border-bottom: none;
+	}
+
+	/* Middle Line 2 */
+	.card-4 .box-3::before {
+		width: 460px;
+	}
+
+	/* Left Line of E */
+	.card-5 .box-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+	/* Right Line of F */
+	.card-6 .box-1::before {
+		border: 1px solid var(--line-color);
+		height: 120px;
+		border-left: none;
+		border-bottom: none;
+	}
+
+	/* Middle Line 3 */
+	.card-6 .box-3::before {
+		width: 460px;
+	}
+
+	/* Left Line of G */
+	.card-7 .box-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+	/* Right Line of H */
+	.card-8 .box-1::before {
+		border: 1px solid var(--line-color);
+		height: 120px;
+		border-left: none;
+		border-bottom: none;
+	}
+
+	/* Middle Line 4 */
+	.card-8 .box-3::before {
+		width: 460px;
+	}
+
+	/* Left Line of I */
+	.card-9 .box-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+	
+
+}
+
+/* A Rightmost */
+
+@media only screen and (max-width: 542px) {
+
+	/* Centering the content */
+	.container
+	{
+		justify-content: center;
+	}
+	/* Right Line of A*/
+	.card-1 .box-1::before {
+		border: 1px solid var(--line-color);
+		height: 120px;
+		border-left: none;
+		border-bottom: none;
+	}
+
+	/* Middle Line 1 */
+	.card-1 .box-3::before {
+		width: 240px;
+	}
+
+	/* Left Line of B */
+	.card-2 .box-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+	/* Right Line of B */
+	.card-2 .box-1::before {
+		border: 1px solid var(--line-color);
+		height: 120px;
+		border-left: none;
+		border-bottom: none;
+	}
+
+	/* Middle Line 2 */
+	.card-2 .box-3::before {
+		width: 240px;
+	}
+
+	/* Left Line of C */
+	.card-3 .box-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+	/* Right Line of C*/
+	.card-3 .box-1::before {
+		border: 1px solid var(--line-color);
+		height: 120px;
+		border-left: none;
+		border-bottom: none;
+	}
+
+	/* Middle Line 3 */
+	.card-3 .box-3::before {
+		width: 240px;
+	}
+	
+	/* Left Line of D */
+	.card-4 .box-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+	/* Right Line of D */
+	.card-4 .box-1::before {
+		border: 1px solid var(--line-color);
+		height: 120px;
+		border-left: none;
+		border-bottom: none;
+	}
+
+	/* Middle line 4 */
+	.card-4 .box-3::before {
+		width: 240px;
+	}
+
+	/* Left Line of E*/
+	.card-5 .box-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+	/* Right Line of E */
+	.card-5 .box-1::before {
+		border: 1px solid var(--line-color);
+		height: 120px;
+		border-left: none;
+		border-bottom: none;
+	}
+
+	/* Middle Line 5 */
+	.card-5 .box-3::before {
+		width: 240px;
+	}
+
+	/* Left Line of F */
+	.card-6 .box-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+	/* Right Line of F */
+	.card-6 .box-1::before {
+		border: 1px solid var(--line-color);
+		height: 120px;
+		border-left: none;
+		border-bottom: none;
+	}
+	
+	/* Middle Line 6 */
+
+	.card-6 .box-3::before {
+		width: 240px;
+	}
+
+	/* Left Line of G */
+	.card-7 .box-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+	/* Right Line of G */
+	.card-7 .box-1::before {
+		border: 1px solid var(--line-color);
+		height: 120px;
+		border-left: none;
+		border-bottom: none;
+	}
+
+	/* Middle Line 7 */
+
+	.card-7 .box-3::before {
+		width: 240px;
+	}
+
+	/* Left Line of H */
+	.card-8 .box-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+	/* Right Line of H */
+	.card-8 .box-1::before {
+		border: 1px solid var(--line-color);
+		height: 120px;
+		border-left: none;
+		border-bottom: none;
+	}
+
+	/* Middle Line 8 */
+
+	.card-8 .box-3::before {
+		width: 240px;
+	}
+	
+	/* Left Line of I */
+	.card-9 .box-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+	/* Right Line of I */
+	.card-9 .box-1::before {
+		border: 1px solid var(--line-color);
+		height: 120px;
+		border-left: none;
+		border-bottom: none;
+	}
+
+	/* Middle Line 9 */
+	.card-9 .box-3::before {
+		width: 348px;
+	}
+
+	/* Left Line of J */
+	.card-10 .box-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+}
