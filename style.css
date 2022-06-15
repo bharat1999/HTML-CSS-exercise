@@ -21,8 +21,7 @@
 }
 
 .container {
-	margin: 0 40px;
-	margin-top: 120px;
+	margin: 120px 40px;
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -150,7 +149,7 @@
 }
 
 /* I Rightmost */
-@media only screen and (min-width: 2061px)  and (max-width:3000px){
+@media only screen and (min-width: 2077px)  and (max-width:2279px){
 
 	/* Right Line  of I*/
 	.card-9 .box-1::before {
@@ -162,7 +161,6 @@
 
 	/* Left Line oh J*/
 	.card-10 .box-1::after {
-		border: 1px solid var(--line-color);
 		border-right: none;
 		border-top: none;
 	}
@@ -176,7 +174,7 @@
 }
 
 /* H Rightmost */
-@media only screen and (min-width: 1840px) and (max-width: 2060px) {
+@media only screen and (min-width: 1857px) and (max-width: 2076px) {
 
 	/* Right Line of H*/
 	.card-8 .box-1::before {
@@ -202,7 +200,7 @@
 
 /* G Rightmost */
 
-@media only screen and (min-width: 1620px) and (max-width: 1839px) {
+@media only screen and (min-width: 1637px) and (max-width: 1856px) {
 
 	/* Right Line of G*/
 	.card-7 .box-1::before {
@@ -229,7 +227,7 @@
 
 /* F RightMost */
 
-@media only screen and (min-width: 1400px) and (max-width: 1619px) {
+@media only screen and (min-width: 1417px) and (max-width: 1636px) {
 
 	/* Right Line of F */
 	.card-6 .box-1::before {
@@ -257,7 +255,7 @@
 
 /* E Rightmost */
 
-@media only screen and (min-width: 1181px) and (max-width: 1399px) {
+@media only screen and (min-width: 1197px) and (max-width: 1416px) {
 
 	/* Right Line of E */
 	.card-5 .box-1::before {
@@ -285,7 +283,7 @@
 
 /* D Rightmost */
 
-@media only screen and (min-width: 960px) and (max-width: 1180px) {
+@media only screen and (min-width: 977px) and (max-width: 1196px) {
 
 	/* Right Line of D */
 	.card-4 .box-1::before {
@@ -331,7 +329,7 @@
 
 /* C Rightmost */
 
-@media only screen and (min-width: 763px) and (max-width: 959px) {
+@media only screen and (min-width: 757px) and (max-width: 976px) {
 
 
 	/* Right Line of C */
@@ -402,7 +400,7 @@
 
 /* B Rightmost */
 
-@media only screen and (min-width: 543px) and (max-width: 762px) {
+@media only screen and (min-width: 537px) and (max-width: 756px) {
 
 
 	
@@ -491,7 +489,7 @@
 
 /* A Rightmost */
 
-@media only screen and (max-width: 542px) {
+@media only screen and (max-width: 536px) {
 
 	/* Centering the content */
 	.container
